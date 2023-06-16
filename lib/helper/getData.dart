@@ -47,9 +47,9 @@ class GetData{
   }
 
 
-  // Future <List<dynamic>> countriesListApi() async{
+  // Future <List<dynamic>> xxxxx() async{
 
-  //   final response = await get(Uri.parse(AppUrl.coutriesList));
+  //   final response = await get(Uri.parse(AppUrl.xxxx));
 
   //   if(response.statusCode == 200){
   //     var data = jsonDecode(response.body);
