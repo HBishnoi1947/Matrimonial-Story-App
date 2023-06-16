@@ -13,10 +13,10 @@ class GetData{
 
     if(response.statusCode == 200){
       var data = jsonDecode(response.body);
-      print("harsh : " + data);
       return MyModel.fromJson(data);
     }
     else{
+      print("harsh : stopped");
       throw Exception('Error');
     }
   }
