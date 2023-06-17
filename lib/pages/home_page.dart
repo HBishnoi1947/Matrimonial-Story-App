@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:matrimonial_story_app/constant.dart';
 import 'package:matrimonial_story_app/helper/getData.dart';
 import 'package:matrimonial_story_app/widget/my_tile.dart';
 
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber.shade100,
+      backgroundColor: myColorBackground,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -52,10 +53,21 @@ class _HomePageState extends State<HomePage> {
                         // mainAxisSize: MainAxisSize.min,
                         // mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          const Image(image: AssetImage("assets/logo.png")),
+                          GestureDetector(
+                            onTap: (){
+                              showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return  myAlert(context);
+                              },
+                              );
+                            },
+                            child: const Image(image: AssetImage("assets/logo.png")
+                            ),
+                          ),
                           Text(
                             "Success Story: ${AppUrl.pageNumber}",
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20,
                               fontStyle: FontStyle.italic,
                             ),

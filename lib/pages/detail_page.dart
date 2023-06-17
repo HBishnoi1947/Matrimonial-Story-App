@@ -15,7 +15,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber.shade100,
+      backgroundColor: myColorBackground,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
