@@ -34,13 +34,17 @@ class _HomePageState extends State<HomePage> {
                         ),
                     );
                   }
-                  // else if(snapshot[item]){
-                  //   return const Center(
-                  //     child: CircularProgressIndicator(
-                  //         color: Colors.black,
-                  //       ),
-                  //   );
-                  // }
+                  else if(snapshot.data!.items!.isEmpty){
+                    return const Center(
+                      child: Text(
+                          "No Story",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black
+                          ),
+                        ),
+                    );
+                  }
                   else{
                     return SingleChildScrollView(
                       controller: scrollController,

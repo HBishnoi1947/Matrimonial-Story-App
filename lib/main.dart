@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:matrimonial_story_app/pages/home_page.dart';
+import 'package:matrimonial_story_app/pages/spash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +18,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.amber,
-        // brightness: Brightness.dark
+        primarySwatch: Colors.brown
       ),
-      home: HomePage(),
+      home: const SplashPage(),
     );
   }
 }
