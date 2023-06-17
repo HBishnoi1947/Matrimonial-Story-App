@@ -4,12 +4,13 @@ class AppUrl{
 
   static int pageNumber = 1;
   
-  String nextPage(){
-    pageNumber++;
+  void nextPageUrl(){
+    if(pageNumber<13) {pageNumber++;}
+  }
+  String getPageUrl(){
     return baseUrl+pageNumber.toString();
   }
-  String previousPage(){
-    pageNumber--;
-    return baseUrl+pageNumber.toString();
+  void previousPageUrl(){
+    if(pageNumber>1) {pageNumber--;}
   }
 }

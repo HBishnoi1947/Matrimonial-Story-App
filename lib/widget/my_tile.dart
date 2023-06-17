@@ -26,7 +26,10 @@ class _MyTileState extends State<MyTile> {
             ),
         ),
           ListTile(
-            title: Text(widget.data.coupleName ?? "NA"),
+            title: Text(widget.data.coupleName ?? "NA",
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 14),
+            ),
             subtitle: Text(
               widget.data.story ?? "NA", 
               style: const TextStyle(

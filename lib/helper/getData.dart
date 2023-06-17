@@ -16,36 +16,49 @@ class GetData{
       return MyModel.fromJson(data);
     }
     else{
-      print("harsh : stopped");
+      // print("harsh : stopped");
       throw Exception('Error');
     }
   }
+  Future <MyModel> getPage() async{
 
-  Future <MyModel> getNextPage() async{
-
-    final response = await get(Uri.parse(AppUrl().nextPage()));
+    final response = await get(Uri.parse(AppUrl().getPageUrl()));
 
     if(response.statusCode == 200){
       var data = jsonDecode(response.body);
       return MyModel.fromJson(data);
     }
     else{
+      // print("harsh : stopped");
       throw Exception('Error');
     }
   }
 
-  Future <MyModel> getPreviousPage() async{
+  // Future <MyModel> getNextPage() async{
 
-    final response = await get(Uri.parse(AppUrl().previousPage()));
+  //   final response = await get(Uri.parse(AppUrl().nextPage()));
 
-    if(response.statusCode == 200){
-      var data = jsonDecode(response.body);
-      return MyModel.fromJson(data);
-    }
-    else{
-      throw Exception('Error');
-    }
-  }
+  //   if(response.statusCode == 200){
+  //     var data = jsonDecode(response.body);
+  //     return MyModel.fromJson(data);
+  //   }
+  //   else{
+  //     throw Exception('Error');
+  //   }
+  // }
+
+  // Future <MyModel> getPreviousPage() async{
+
+  //   final response = await get(Uri.parse(AppUrl().previousPage()));
+
+  //   if(response.statusCode == 200){
+  //     var data = jsonDecode(response.body);
+  //     return MyModel.fromJson(data);
+  //   }
+  //   else{
+  //     throw Exception('Error');
+  //   }
+  // }
 
 
   // Future <List<dynamic>> xxxxx() async{
